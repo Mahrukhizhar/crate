@@ -1,7 +1,7 @@
 'use strict'
 
 // User
-module.exports = function(sequelize, DataTypes) {
+export default function(sequelize, DataTypes) {
   let User = sequelize.define('users', {
     name: {
       type: DataTypes.STRING
@@ -22,4 +22,4 @@ module.exports = function(sequelize, DataTypes) {
   }
 
   return User
-}
+};

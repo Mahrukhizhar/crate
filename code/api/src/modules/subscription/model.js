@@ -1,7 +1,7 @@
 'use strict'
 
 // Subscription
-module.exports = function(sequelize, DataTypes) {
+export default function(sequelize, DataTypes) {
   let Subscription = sequelize.define('subscriptions', {
     userId: {
       type: DataTypes.INTEGER
@@ -17,4 +17,4 @@ module.exports = function(sequelize, DataTypes) {
   }
 
   return Subscription
-}
+};

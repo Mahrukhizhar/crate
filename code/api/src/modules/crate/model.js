@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function(sequelize, DataTypes) {
+export default function(sequelize, DataTypes) {
   let Crate = sequelize.define('crates', {
     name: {
       type: DataTypes.STRING
@@ -15,4 +15,4 @@ module.exports = function(sequelize, DataTypes) {
   }
 
   return Crate
-}
+};

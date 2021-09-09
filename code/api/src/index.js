@@ -6,6 +6,7 @@ import setupLoadModules from './setup/load-modules'
 import setupGraphQL from './setup/graphql'
 import setupUpload from './setup/upload'
 import setupStartServer from './setup/start-server'
+import setupUnlaunchClient from './setup/unlaunchClient'
 
 // Create express server
 const server = express()
@@ -21,3 +22,6 @@ setupGraphQL(server)
 
 // Start server
 setupStartServer(server)
+
+
+setupUnlaunchClient()

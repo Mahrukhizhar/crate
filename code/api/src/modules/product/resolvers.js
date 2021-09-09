@@ -1,10 +1,20 @@
 // App Imports
 import params from '../../config/params'
 import models from '../../setup/models'
+import unlaunch from '../../setup/common'
+// import unlaunch from '../../setup/'
+
 
 // Get all products
 export async function getAll() {
-  return await models.Product.findAll({ order: [['id', 'DESC']] })
+  const variation = unlaunch.client.variation("crate-products", "user-id-123");
+  console.log("variation returned: "+variation)
+  if(variation == 'on'){
+    return await models.Product.findAll({ order: [['id', 'DESC']] })
+  }else{
+    return await models.Product.findAll({ order: [['id', 'ASC']] })
+  }
+  
 }
 
 // Get product by slug

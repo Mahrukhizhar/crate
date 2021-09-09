@@ -1,8 +1,8 @@
 'use strict';
 
-const params = require('../config/params');
+import params from '../config/params';
 
-module.exports = {
+export default {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('products', [
       {
@@ -91,4 +91,4 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('products', null, {});
   }
-}
+};

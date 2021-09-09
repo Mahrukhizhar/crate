@@ -1,10 +1,10 @@
 'use strict';
 
-const bcrypt = require('bcrypt');
-const config = require('../config/server.json');
-const params = require('../config/params.json');
+import bcrypt from 'bcrypt';
+import config from '../config/server.json';
+import params from '../config/params.json';
 
-module.exports = {
+export default {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('users', [
       {
@@ -29,4 +29,4 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('users', null, {});
   }
-}
+};
